@@ -12,7 +12,7 @@ class SportFig:
         gender = self.df[["NOC", "Sex", "Team", "Medal"]][self.df["Sport"] == self.name].value_counts().reset_index()
         gender = gender.rename(columns={0:"Number"})
         fig = px.scatter(gender, x="Team", y="Medal", size="Number", color="Sex", title="Medals for counties in gender")
-        fig.show()
+        return fig
     
     def sport_country(self):
         country = self.df[["NOC", "Sex", "Team", "Medal"]][self.df["Sport"] == self.name].value_counts().reset_index()
@@ -22,10 +22,10 @@ class SportFig:
                     color="Number",
                     title="Total medals in OS (M & F)",
                     color_continuous_scale=px.colors.sequential.Plasma)
-        fig.show()
+        return fig
 
     def sport_age(self):
         age = self.df[["Team", "Age"]][self.df["Sport"] == self.name]
         fig = px.box(age, x="Team", y="Age", title="Plot box for ages which the teams who won the OS medals")
-        fig.show()
+        return fig
         
