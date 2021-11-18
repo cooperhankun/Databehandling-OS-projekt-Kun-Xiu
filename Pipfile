@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 dash = "*"
 dash-daq = "*"
+pyecharts = "*"
 
 [dev-packages]
 
