@@ -43,12 +43,12 @@ attributes_options_dropdown = [{"label": name, "value": symbol}
                           for symbol, name in options_dict.items()]
 
 #------------------------------------------------------------------------------------------------------- China team
-stylesheets = [dbc.themes.MATERIA]
+stylesheets = [dbc.themes.MATERIAL]
 app = dash.Dash(__name__, external_stylesheets=stylesheets,
                 meta_tags=[dict(name="viewport", content="width=device-width, initial-scale=1.0")])
 
 app.layout = dbc.Container([
-    html.Div([       
+    html.Div([
     html.H1('OS Dashboard', style={'textAlign': 'center', 'color':'#87CEEB'})]),
 
     dbc.Row([
@@ -226,4 +226,4 @@ def update_graph(value):
         return fig3
 
 if __name__ == "__main__":
-    app.run_server(debug=False)
+    app.run_server(debug=True)

@@ -22,6 +22,7 @@ class SportFig:
                     color="Number",
                     title="Total medals in OS (M & F)",
                     color_continuous_scale=px.colors.sequential.Plasma)
+        # https://plotly.com/python/choropleth-maps/
         return fig
 
     def sport_age(self):
